@@ -1,13 +1,14 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 
+import { PrimengModule } from './shared/primeng/primeng.module';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ProductsComponent } from './product/pages/products/products.component';
 
 @NgModule({
-  declarations: [AppComponent, ProductsComponent],
-  imports: [BrowserModule, AppRoutingModule],
+  declarations: [AppComponent],
+  imports: [BrowserModule, HttpClientModule, AppRoutingModule, PrimengModule],
   providers: [],
   bootstrap: [AppComponent],
 })
