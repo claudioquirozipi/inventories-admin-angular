@@ -1,6 +1,9 @@
-<p>products works!</p>
-<button pButton>hola</button>
-
+<div class="header">
+  <h1>Productos</h1>
+  <button pButton [routerLink]="['/productos/crear']">Crear producto</button>
+</div>
 <ul>
-  <li *ngFor="let product of products">{{ product.title }}</li>
+  <li *ngFor="let product of products">
+    <app-card [product]="product"></app-card>
+  </li>
 </ul>

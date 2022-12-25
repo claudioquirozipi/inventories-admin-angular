@@ -1,0 +1,36 @@
+<div class="container">
+  <div class="item">
+    <p-galleria
+      [value]="product | productsToGallery"
+      [responsiveOptions]="responsiveOptions"
+      [containerStyle]="{ 'max-width': '100%' }"
+      [numVisible]="5"
+      [circular]="true"
+      [showItemNavigators]="true"
+    >
+      <ng-template pTemplate="item" let-item>
+        <img [src]="item.previewImageSrc" style="width: 100%; display: block" />
+      </ng-template>
+      <ng-template pTemplate="thumbnail" let-item>
+        <div class="grid grid-nogutter justify-content-center">
+          <img [src]="item.thumbnailImageSrc" style="display: block" />
+        </div>
+      </ng-template>
+    </p-galleria>
+  </div>
+  <div class="item">
+    slug: {{ slug }}
+
+    <input type="text" pInputText />
+
+    <span class="p-float-label">
+      <input id="float-input" type="text" pInputText />
+      <label for="float-input">Username</label>
+    </span>
+
+    <span class="p-float-label">
+      <input id="float-input" type="text" pInputText />
+      <label for="float-input">Username</label>
+    </span>
+  </div>
+</div>

@@ -1,0 +1,26 @@
+<p-card
+  header="{{ product.title | cropText }}"
+  [subheader]="'Precio: S/ ' + product.price"
+  styleClass="p-card-shadow"
+>
+  <ng-template pTemplate="header">
+    <img
+      alt="Card"
+      [src]="'http://localhost:5000/image/products/' + product.images[0]"
+    />
+  </ng-template>
+
+  <p>{{ product.description | cropText : 80 }}</p>
+  <ng-template pTemplate="footer">
+    <p-button
+      icon="pi pi-file-edit"
+      styleClass="p-button-warning p-button-rounded"
+      [routerLink]="['/productos/editar', product.slug]"
+    ></p-button>
+    <p-button
+      icon="pi pi-times"
+      styleClass="p-button-danger p-button-rounded"
+      [style]="{ 'margin-left': '.5rem' }"
+    ></p-button>
+  </ng-template>
+</p-card>

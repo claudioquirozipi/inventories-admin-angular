@@ -1,6 +1,7 @@
 import { Routes, RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 
+import { CreateEditProductComponent } from './pages/create-edit-product/create-edit-product.component';
 import { HomeProductComponent } from './pages/home-product/home-product.component';
 import { ProductsComponent } from './pages/products/products.component';
 
@@ -10,13 +11,20 @@ const routes: Routes = [
     component: HomeProductComponent,
     children: [
       {
-        path: 'products',
+        path: 'productos',
         component: ProductsComponent,
       },
-
+      {
+        path: 'productos/crear',
+        component: CreateEditProductComponent,
+      },
+      {
+        path: 'productos/editar/:slug',
+        component: CreateEditProductComponent,
+      },
       {
         path: '**',
-        redirectTo: 'products',
+        redirectTo: 'productos',
       },
     ],
   },

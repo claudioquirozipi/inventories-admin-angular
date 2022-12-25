@@ -1,0 +1,11 @@
+.container {
+  display: grid;
+  grid-template-columns: 4fr 8fr;
+  gap: 2rem;
+}
+.item {
+  border: 1px solid yellow;
+}
+img {
+  width: 100%;
+}

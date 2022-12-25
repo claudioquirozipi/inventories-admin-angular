@@ -14,8 +14,10 @@ export class ProductService {
   getProducts(): Observable<Product[]> {
     return this.http.get<Product[]>(`${this.baseUrl}/products`);
   }
+  getProductBySlug(slug: string): Observable<Product> {
+    return this.http.get<Product>(`${this.baseUrl}/products/${slug}`);
+  }
 
-  getProductByTerm() {}
   createProduct() {}
   editProduct() {}
   deleteProduct() {}
