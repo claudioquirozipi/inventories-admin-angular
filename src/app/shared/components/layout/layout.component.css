@@ -1,0 +1,10 @@
+.content {
+  padding: 0 0.5rem;
+}
+
+.rightTemplate {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  align-items: center;
+  gap: 0.5rem;
+}

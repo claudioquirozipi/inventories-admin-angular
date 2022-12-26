@@ -11,15 +11,15 @@ const routes: Routes = [
     component: HomeProductComponent,
     children: [
       {
-        path: 'productos',
+        path: '',
         component: ProductsComponent,
       },
       {
-        path: 'productos/crear',
+        path: 'crear',
         component: CreateEditProductComponent,
       },
       {
-        path: 'productos/editar/:slug',
+        path: 'editar/:slug',
         component: CreateEditProductComponent,
       },
       {

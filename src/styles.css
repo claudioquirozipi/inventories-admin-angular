@@ -3,4 +3,6 @@ body {
   background-color: var(--surface-b);
   color: var(--text-color);
   font-family: var(--font-family);
+  padding: 0;
+  margin: 0;
 }

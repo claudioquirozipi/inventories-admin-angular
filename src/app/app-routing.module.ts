@@ -3,13 +3,18 @@ import { NgModule } from '@angular/core';
 
 const routes: Routes = [
   {
-    path: '',
+    path: 'productos',
     loadChildren: () =>
       import('./product/product.module').then((m) => m.ProductModule),
   },
   {
+    path: 'categorias',
+    loadChildren: () =>
+      import('./category/category.module').then((m) => m.CategoryModule),
+  },
+  {
     path: '**',
-    redirectTo: '',
+    redirectTo: 'productos',
   },
 ];
 

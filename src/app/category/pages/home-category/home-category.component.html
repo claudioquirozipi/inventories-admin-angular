@@ -1,0 +1,55 @@
+<app-layout>
+  <div class="header">
+    <h4>Categorías</h4>
+    <form
+      class="form"
+      [formGroup]="formCreateCategory"
+      (submit)="createCategory($event)"
+    >
+      <input type="text" pInputText formControlName="title" />
+      <p-button
+        type="submit"
+        icon="pi pi-plus"
+        styleClass="p-button-warning p-button-rounded"
+        [disabled]="formCreateCategory.invalid"
+      ></p-button>
+    </form>
+  </div>
+
+  <p-table [value]="categories" [tableStyle]="{ 'min-width': '50rem' }">
+    <ng-template pTemplate="header">
+      <tr>
+        <th>id</th>
+        <th>Titulo</th>
+        <th>Editar</th>
+        <th>Borrar</th>
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-category>
+      <tr>
+        <td>{{ category.id }}</td>
+        <td>{{ category.title }}</td>
+        <td>
+          <p-button
+            icon="pi pi-file-edit"
+            styleClass="p-button-warning p-button-rounded"
+          ></p-button>
+        </td>
+        <td>
+          <p-button
+            icon="pi pi-times"
+            styleClass="p-button-danger p-button-rounded"
+            (click)="confirmDelete(category.id)"
+          ></p-button>
+        </td>
+      </tr>
+      <p-confirmDialog
+        [style]="{ width: '50vw' }"
+        key="positionDialog"
+        [baseZIndex]="10000"
+        rejectButtonStyleClass="p-button-outlined"
+      ></p-confirmDialog>
+      <!-- <p-toast></p-toast> -->
+    </ng-template>
+  </p-table>
+</app-layout>

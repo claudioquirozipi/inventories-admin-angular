@@ -1,0 +1,22 @@
+<p-menubar [model]="items">
+  <ng-template pTemplate="start">
+    <img
+      src="https://www.primefaces.org/primeng/assets/showcase/images/primeng-logo-light.svg"
+      height="40"
+      class="mr-2"
+    />
+  </ng-template>
+  <div class="rightTemplate">
+    <p-avatar
+      pBadge
+      styleClass="mr-2"
+      image="https://www.primefaces.org/primeng/assets/showcase/images/demo/avatar/amyelsner.png"
+      shape="circle"
+    ></p-avatar>
+    <h4>Nombre Usuario</h4>
+    <button pButton label="Logout" icon="pi pi-power-off"></button>
+  </div>
+</p-menubar>
+<div class="content">
+  <ng-content></ng-content>
+</div>

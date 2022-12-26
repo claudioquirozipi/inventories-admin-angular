@@ -9,6 +9,7 @@ import { ProductsComponent } from './pages/products/products.component';
 import { CardComponent } from './components/card/card.component';
 import { ProductRoutingModule } from './product-routing.module';
 import { CropTextPipe } from '../shared/pipes/crop-text.pipe';
+import { LayoutModule } from '../shared/components/layout/layout.module';
 
 @NgModule({
   declarations: [
@@ -16,9 +17,10 @@ import { CropTextPipe } from '../shared/pipes/crop-text.pipe';
     ProductsToGalleryPipe,
     HomeProductComponent,
     ProductsComponent,
+
     CardComponent,
     CropTextPipe,
   ],
-  imports: [CommonModule, ProductRoutingModule, PrimengModule],
+  imports: [CommonModule, ProductRoutingModule, PrimengModule, LayoutModule],
 })
 export class ProductModule {}
